@@ -1,0 +1,46 @@
+https://www.kaggle.com/datasets/rohitrox/healthcare-provider-fraud-detection-analysis
+Healthcare-Provider-Fraud-Detection-Analysis
+
+
+The main goal of this project is to ’Predict the potentially fraudulent providers’ based on the claims filed by them. Also we will discover what are the most important variables helpful in detecting the behaviour of potentially fraud providers so that we may flag such claims and perform in depth investigation on them.
+
+Problem Description : Health insurance is like a backbone to the citizens of a country that deals with many hardships along with uncertainty in their health condition. To contract the burden of paying huge medical bills governments as well as private insurance companies provide health insurance schemes on some premiums to be paid in installments. One of the most important problems in the insurance industry is fraud in claims which causes substantial losses to the insurance providers..The cost of determining or predicting potential fraud in any claim submitted is very high because if it is done incorrectly it may irritate legitimate customers and it may result in delayed claims adjudication.Healthcare fraud is an organized crime which involves peers of providers, physicians, beneficiaries acting together to make fraud claims.Provider Fraud is one of the biggest problems facing Medicare. For example an uninsured person may unlawfully get insurance benefits disguising himself as an insured person, or some provider may wrongly put an exaggerated amount on a member's bill later to be settled with the insurance provider.
+
+Problem Statement :
+
+Predict the probability that a provider is potential fraud and flag them accordingly.
+Discover important variables that might be helpful in flagging providers as potential fraud.
+Business constraints:
+
+Cost of misclassification is very high.
+No strict latency requirements.
+Model interpretability is very important.
+Data : Data-Download We have 4 csv files for training/testing purposes.These data files are procured from kaggle. These files contain viable information of the insurance scheme beneficiaries,patients who got admitted in the hospital and undergone some medical procedure and diagnosis(inpatient data),patients who visited hospital for some procedure or diagnosis or both but were not admitted(outpatient) and medical service provider ID's labelled as potential fraud or not.
+
+Some important columns in the dataset that we have :
+
+1. Inpatient and outpatient data:
+
+ClaimID : This a unique id for each claim submitted
+Bene_ID : contains Unique Id of the beneficiaries registered for insurance scheme
+AttendingPhysician : column contains the id of the physicians who attended the patient.
+OperatingPhysician : column contains the id of the the physicians who operated on the patient
+ClmDiagnosisCode : contains Diagnosis Codes for that are performed on the patients by providers.
+ClmProcedureCode : contains procedures codes that patients undergo.
+Provider : unique Id of the healthcare providers.
+InscClaimAmtReimbursed : Total amount paid to the claimant after settlement.
+ClaimStartDt / ClaimEndDt : These columns has the date on which the claims were submitted and the date when claims got settled respectively.
+AdmissionDt / DischargeDt : Date on which the patient got admitted in hospital and the date on which patient got discharged .Applicable for only inpatient data.
+
+2. Beneficiaries data :
+
+Bene_ID : contains Unique Id of the beneficiaries registered for the insurance scheme.
+DOB : Date of birth of the beneficiaries registered for the insurance scheme.
+Gender : Gender of the beneficiaries registered for the insurance scheme.
+State/Country : contains state/country code for the registered members.
+Premedical conditions : There are some columns such as RenalDiseaseIndicator,ChronicCond_Depression,ChronicCond_Diabetes etc to indicate if the member has any prior medical condition.
+
+3. Target data:
+
+Provider : This a unique id for each of the healthcare providers.
+Target : This column has two values Yes and No indicating if the corresponding provider is flagged as potential fraud or not.
